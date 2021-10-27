@@ -13,7 +13,9 @@ void Main()
     MooseSays("I really am enthusiastic");
 
     // As a question
-   Questions();
+    Questions();
+    // Tells a Fortune
+    MagicMoose();   
 } 
 void MooseSays(string message)
 {
@@ -84,4 +86,45 @@ void Questions()
     MooseSays(wantsSecret ? "ME TOO!!!! I love secrets...tell me one!" : "Oh, no...secrets are the best, I love to share them!");
 }
 
+void MagicMoose() 
+{
+    string[] mooseResponses = { 
+        "As I see it, yes.",
+        "Ask again later.",
+        "Better not tell you now.",
+        "Cannot predict now.",
+        "Concentrate and ask again.",
+        "Don’t count on it.",
+        "It is certain.",
+        "It is decidedly so.",
+        "Most likely.",
+        "My reply is no.",
+        "My sources say no.",
+        "Outlook not so good.",
+        "Outlook good.",
+        "Reply hazy, try again.",
+        "Signs point to yes.",
+        "Very doubtful.",
+        "Without a doubt.",
+        "Yes.",
+        "Yes – definitely.",
+        "You may rely on it.", 
+        };
+        
+    Random r = new Random();
+    int genRand= r.Next(0,20);
 
+    Console.WriteLine($"Ask me a question and my moosestincts will tell your forturne");
+    string question = Console.ReadLine();
+
+    while (question == null)
+    {
+        Console.WriteLine($"Ask me a question and my moosestincts will tell your forturne. ");
+        question = Console.ReadLine().ToLower();
+    }
+
+    if (question != null )
+    {
+        MooseSays($"{mooseResponses[genRand]}");
+    }
+}
