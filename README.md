@@ -1,8 +1,7 @@
 # EnthusiasticMoose
 Welcome to the Enthusiastic Moose Simulator!
 --------------------------------------------
-
-
+```
                                       _.--^^^--,
                                     .'          `\
   .-^^^^^^-.                      .'              |
@@ -29,3 +28,4 @@ Welcome to the Enthusiastic Moose Simulator!
                       /|\  (_\  /_) /
                       \ \'._  ` '_.'
                        `^^` `^^^`
+```
