@@ -116,15 +116,16 @@ void MagicMoose()
 
     Console.WriteLine($"Ask me a question and my moosestincts will tell your forturne");
     string question = Console.ReadLine();
-
-    while (question == null)
+    
+    while (question == "")
     {
-        Console.WriteLine($"Ask me a question and my moosestincts will tell your forturne. ");
-        question = Console.ReadLine().ToLower();
+        Console.WriteLine($"Ask me a question and my moosestincts will tell your forturne.");
+        question = Console.ReadLine();
+        
     }
 
-    if (question != null )
+    if (question != "")
     {
         MooseSays($"{mooseResponses[genRand]}");
-    }
+    };
 }
